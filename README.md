@@ -25,7 +25,6 @@ This repository offers a hands-on tutorial for developing Retrieval-Augmented Ge
 2. The environment variables will be loaded from the `.env` file, and the script will automatically interact with the OpenAI API.
    
 **※ The .env file can be downloaded from the link below.**
-
 https://drive.google.com/file/d/1HjwRNZxBVN4xz8rFZdH8LgToXDezjh_q/view?usp=sharing
 
 
