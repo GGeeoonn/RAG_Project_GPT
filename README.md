@@ -1,6 +1,6 @@
-# RAG using OpenAI's Assistant API
+# RAG using OpenAI API
 
-This repository provides a practical guide to building Retrieval-Augmented Generation (RAG) systems using OpenAI’s Assistant API with Large Language Models (LLMs) from GPT Series, and PDF documents as the primary data source. The guide walks developers through the steps of setting up a vector store, creating an AI assistant, and managing conversation threads to effectively implement RAG systems.
+This repository offers a hands-on tutorial for developing Retrieval-Augmented Generation (RAG) systems utilizing OpenAI API, with PDF documents serving as the primary data source. It guides developers through the entire process — enabling the efficient implementation of RAG-based solutions.
 
 ## Prerequisites
 
@@ -24,41 +24,8 @@ This repository provides a practical guide to building Retrieval-Augmented Gener
 1. Place your PDF documents in `Upload` folder in the same directory as `main.py`.
 2. The environment variables will be loaded from the `.env` file, and the script will automatically interact with the OpenAI API.
 
-## How to Use
 
-1. **Upload PDFs to Vector Store:**
-   The function `upload_PDFs_to_vector_store` allows you to upload your PDF documents to the vector store, making them searchable by the RAG system.
-
-2. **Create a Vector Store:**
-   The function `get_or_create_vector_store` either retrieves an existing vector store or creates a new one for storing vector embeddings of documents.
-
-3. **Create an AI Assistant:**
-   Use `get_or_create_assistant` to create or retrieve an AI assistant capable of querying the vector store for relevant information.
-
-4. **Start a Conversation:**
-   After setting up the assistant, you can start a conversation using the Assistant API. The conversation thread will process user inputs, retrieve relevant information from the vector store, and respond with citations if applicable.
-
-5. **Run the Conversation:**
-   The assistant runs in a real-time conversation loop, where you can ask questions, and the assistant retrieves information from the PDFs to provide meaningful responses.
-
-## Example Usage
-
-1. **Create and upload PDFs:**
-    ```python
-    vectorStore = get_or_create_vector_store(client, "your_vector_store_name_here")
-    ```
-
-2. **Create an AI Assistant:**
-    ```python
-    assistant = get_or_create_assistant(client, model_name, "your_assistant_name_here", vector_store.id)
-    ```
-
-3. **Start a conversation:**
-    ```python
-    message_thread = client.beta.threads.create(**thread_conversation)
-    ```
-
-## Best Practices
+## Practice
 
 - Ensure PDFs are well-structured and relevant to the domain for improved performance.
 - Use meaningful filenames and metadata for better file management.
